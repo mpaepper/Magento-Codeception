@@ -7,22 +7,19 @@
 class_name: AcceptanceTester
 modules:
     enabled:
-        - WebDriver
-        - AcceptanceHelper
-    config:
-        WebDriver:
-            url: http://mage.dev/
-            browser: phantomjs
+        - WebDriver:
+            browser: firefox
             clear_cookies: false
-            window_size: maximize
+            url: http://localhost/hagel/magento
+        - AcceptanceHelper
 data:
     checkout:
         firstname: 'Acceptance'
         lastname: 'Tester'
         email: 'codeception@test.com'
-        country_id: 'GB'
+        country_id: 'DE'
         street: 'Baker Str. 1'
-        postcode: '10000'
-        city: 'London'
-        phone: '911'
+        postcode: '21423'
+        city: 'Hamburg'
+        phone: '9133431'
         timeout: 7

@@ -68,26 +68,29 @@ class CheckoutCest
         $I->fillField(Page\Checkout::$billingFirstname, $this->getConfig('firstname'));
         $I->fillField(Page\Checkout::$billingLastname, $this->getConfig('lastname'));
         $I->fillField(Page\Checkout::$billingEmail, $this->getConfig('email'));
+        $I->fillField(Page\Checkout::$billingEmailCopy, $this->getConfig('email'));
         $I->selectOption(Page\Checkout::$billingCountryId, $this->getConfig('country_id'));
         $I->fillField(Page\Checkout::$billingStreet1, $this->getConfig('street'));
         $I->fillField(Page\Checkout::$billingPostcode, $this->getConfig('postcode'));
         $I->fillField(Page\Checkout::$billingCity, $this->getConfig('city'));
         $I->fillField(Page\Checkout::$billingTelephone, $this->getConfig('phone'));
-        $I->click('button', Page\Checkout::$billingAddressContainer);
+        $I->click(Page\Checkout::$billingAddressContainer);
 
         $I->amGoingTo('select shipping method');
         $I->waitForElementVisible(Page\Checkout::$shippingButtonsContainer);
         $I->selectOption(Page\Checkout::$shippingMethodInput, Page\Checkout::$shippingMethod);
-        $I->click('button', Page\Checkout::$shippingButtonsContainer);
+        $I->click(Page\Checkout::$shippingButtonsContainer);
 
         $I->waitForElementVisible(Page\Checkout::$paymentButtonsContainer);
-        // $I->amGoingTo('select payment method');
-        // $I->click(Page\Checkout::$paymentMethod);
-        $I->click('button', Page\Checkout::$paymentButtonsContainer);
+        $I->amGoingTo('select payment method');
+        $I->click(Page\Checkout::$paymentMethod);
+        $I->click(Page\Checkout::$paymentButtonsContainer);
 
         $I->waitForElementVisible(Page\Checkout::$checkoutReviewContainer);
         $I->amGoingTo('review and finish my order');
-        $I->click('button', Page\Checkout::$checkoutReviewContainer);
+        $I->checkOption(Page\Checkout::$checkbox1);
+        $I->checkOption(Page\Checkout::$checkbox2);
+        $I->click(Page\Checkout::$checkoutReviewContainer);
         $I->wait($this->getConfig('timeout'));
     }
 
