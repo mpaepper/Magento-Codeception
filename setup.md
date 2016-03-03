@@ -1,5 +1,6 @@
 To set this up, download the Selenium jar file: http://goo.gl/qTy1IB
 Run selenium in the console using: java -jar $selenium.jar where $selenium.jar is your downloaded jar file
+(If you want to run Chrome, download the chrome web driver and run Selenium using java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-2.52.0.jar)
 
 Install codeception:
 sudo curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept
