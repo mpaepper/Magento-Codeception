@@ -1,0 +1,35 @@
+common_test_settings: 
+  checkout_url: '/default/checkout/onepage/'
+  cart_url: '/hagel/magento/default/checkout/cart/'
+  success_url: '/hagel/magento/default/checkout/onepage/success'
+  test_category_url: 'default/reise-urlaub.html'
+  first_product_html_element: '//*[@id="products"]/div[5]/ul/li[1]/div'
+existed_user: 
+  existed_user_url: 'customer/account/login/'
+  existed_user_email_element: '#login-email'
+  existed_user_password_element: '#login-password'
+register_new_form: 
+  form_firstname_element: '#billing:firstname'
+  form_lastname_element: '#billing:lastname'
+  form_email_element: '#billing:email'
+  form_email_confirm_element: '#billing:confirm_email'
+  guest_street_element: '#billing:street1'
+  form_postcode_element: '#billing:postcode'
+  form_city_element: '#billing:city'
+  form_country_element: '#billing:country_id'
+  form_tel_element: '#billing:telephone'
+new_user: 
+  new_user_password_element: '#billing:customer_password'
+  new_user_password_confirm_element: '#billing:confirm_password'
+paymentmathod: 
+  paymentmethod_active: 'phoenix_cashondelivery'
+  paymentmethod_elements: 
+    _1461076749991_991: 
+      payment_method: 'banktransfer'
+      html_style: '#p_method_banktransfer'
+    _1461149583838_838: 
+      payment_method: 'saferpaycw_visa'
+      html_style: '#p_method_saferpaycw_visa'
+    _1461595167717_717: 
+      payment_method: 'phoenix_cashondelivery'
+      html_style: '#p_method_phoenix_cashondelivery'

@@ -23,3 +23,16 @@ data:
         city: 'Hamburg'
         phone: '9133431'
         timeout: 7
+        login_email: codeception@test.com
+        login_password: 123456
+        new_password: 123456
+        new_confirm_password: 123456
+    paymentmethods:
+        - paypal
+        - banktransfer
+        - klarna
+        - sofortueberweisung
+        - mastercard
+        - visacard
+        - nachname
+        - lastschrift
