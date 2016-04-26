@@ -25,7 +25,7 @@ data:
         postcode: '21423'
         city: 'Hamburg'
         phone: '9133431'
-        timeout: 7
+        timeout: 10
         login_email: user@lemundo.de
         login_password: 123456
         new_password: 123456
