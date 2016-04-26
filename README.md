@@ -31,3 +31,8 @@
 
 See [Running Tests](http://codeception.com/docs/02-GettingStarted#Running-Tests) for detailed info
 
+## Run with PhantomJS
+
+* composer install
+
+vendor/bin/phantomjs --webdriver=4444

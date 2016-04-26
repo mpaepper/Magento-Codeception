@@ -1,0 +1,14 @@
+{
+    "require": {
+        "codeception/codeception": "2.*",
+        "jonnyw/php-phantomjs": "3.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ],
+        "post-update-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ]
+    }
+}

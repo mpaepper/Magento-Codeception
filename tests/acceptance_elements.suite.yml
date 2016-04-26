@@ -2,8 +2,8 @@ common_test_settings:
   checkout_url: '/default/checkout/onepage/'
   cart_url: '/hagel/magento/default/checkout/cart/'
   success_url: '/hagel/magento/default/checkout/onepage/success'
-  test_category_url: 'default/reise-urlaub.html'
-  first_product_html_element: '//*[@id="products"]/div[5]/ul/li[1]/div'
+  test_category_url: 'default/schenken/geschenk-gutschein.html'
+  first_product_html_element: '//*[@id="products"]/div[5]/ul/li[1]/div/div/div/div[1]/a/div'
 existed_user: 
   existed_user_url: 'customer/account/login/'
   existed_user_email_element: '#login-email'
