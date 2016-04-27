@@ -144,8 +144,7 @@ class CheckoutCest {
     protected function testOnePageCheckout(AT $I) {
 
         $I->amGoingTo('select shipping method');
-        //$I->waitForElementVisible($this->pageCheckout->shippingButtonsContainer);
-        $I->waitForElementVisible('#gogogosfgsfgdf');
+        $I->waitForElementVisible($this->pageCheckout->shippingButtonsContainer);
         $I->selectOption($this->pageCheckout->shippingMethodInput, $this->pageCheckout->shippingMethod);
         $I->click($this->pageCheckout->shippingButtonsContainer);
 
