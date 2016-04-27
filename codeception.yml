@@ -16,3 +16,11 @@ modules:
             user: ''
             password: ''
             dump: tests/_data/dump.sql
+extensions:
+    enabled: [Codeception\Extension\Logger,Codeception\Extension\Recorder]
+    config:
+        Codeception\Extension\Logger:
+           max_files: 3
+    config:
+        Codeception\Extension\Recorder:
+           delete_successful: true

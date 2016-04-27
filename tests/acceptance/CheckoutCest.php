@@ -15,7 +15,7 @@ class CheckoutCest {
     private $actor;
 
     function _before(AT $I) {
-        $this->cleanOutput();
+        //$this->cleanOutput();
         $this->cleanData();
         // will be executed at the beginning of each test
         $this->pageCatalog = new Page\Catalog($I);
@@ -144,7 +144,8 @@ class CheckoutCest {
     protected function testOnePageCheckout(AT $I) {
 
         $I->amGoingTo('select shipping method');
-        $I->waitForElementVisible($this->pageCheckout->shippingButtonsContainer);
+        //$I->waitForElementVisible($this->pageCheckout->shippingButtonsContainer);
+        $I->waitForElementVisible('#gogogosfgsfgdf');
         $I->selectOption($this->pageCheckout->shippingMethodInput, $this->pageCheckout->shippingMethod);
         $I->click($this->pageCheckout->shippingButtonsContainer);
 
