@@ -46,8 +46,8 @@ class CheckoutCest {
     }
 
     protected function cleanData() {
-        
-        define('MAGENTO_ROOT', '../magento');
+        $magentoDir = dirname(getcwd());
+        define('MAGENTO_ROOT', $magentoDir);
         $mageFilename = MAGENTO_ROOT . '/app/Mage.php';
         require_once $mageFilename;
         umask(0);
